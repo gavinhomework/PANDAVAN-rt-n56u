@@ -2,6 +2,8 @@ name: CI
 
 # Controls when the action will run. 
 on: 
+  watch:
+    types: [started]
   push:
   pull_request:
   workflow_dispatch:
