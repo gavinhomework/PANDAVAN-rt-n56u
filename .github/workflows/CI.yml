@@ -30,8 +30,8 @@ jobs:
             #targets: "PSG1208 PSG1218 NEWIFI-MINI MI-MINI MI-3 OYE-001 5K-W20"
           #- build_variant: "mt7628"
             #targets: "HC5861B MI-NANO MZ-R13 MZ-R13P 360P2 HC5761A HC5661A"
-          - build_variant: "mt7621"
-            targets: "RM2100"
+          #- build_variant: "mt7621"
+            #targets: "RM2100"
             #targets: "K2P_nano K2P DIR-878 RM2100 CR660x"
           - build_variant: "mt7621-usb"
             targets: "NEWIFI3"
@@ -78,7 +78,7 @@ jobs:
         if: ${{ github.event_name == 'release' && success() }}
         uses: svenstaro/upload-release-action@2.2.0
         with:
-          repo_token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
+          repo_token: ${{ secrets.ACTIONS_TRIGGER_PAT3 }}
           file: ${{ env.images_dir }}/*.trx
           tag: ${{ github.ref }}
           overwrite: true
